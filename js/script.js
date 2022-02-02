@@ -47,3 +47,22 @@ function crossOut() {
 //event listener for double click to cross out li item
 li.on('dblclick', crossOut);
 
+//javascript=====================================================================
+ //3(i). Adding the delete button "X":
+  //  let crossOutButton = document.createElement("crossOutButton");
+ 	// crossOutButton.appendChild(document.createTextNode("X"));
+ 	// li.appendChild(crossOutButton);
+  // crossOutButton.addEventListener("click", deleteListItem);
+
+// Below code excutes the code listed above but in jQuery syntex.
+//creates and sets crossOutButton element.
+let crossOutButton = $('<crossOutButton></crossOutButton>');
+// appends(attaches) new text node with a value of 'X' to crossOutButton above
+crossOutButton.append(document.createTextNode('X'));
+//appends(attaches) crossOutButton to li
+li.append(crossOutButton);
+
+// adds event listner of 'click' to crossOutButton and if event happens, executes deleteListItem
+crossOutButton.on('click', deleteListItem);
+
+
