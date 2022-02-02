@@ -30,3 +30,20 @@ function newItem() {
     $('#list').append(li);
   };
 
+//javascript=====================================================================
+ //2. Crossing out an item from the list of items:
+  //  function crossOut() {
+ 	// 	li.classList.toggle("strike");
+ 	// }
+  //
+ 	// li.addEventListener("dblclick",crossOut);
+
+// Below code excutes the code listed above but in jQuery syntex
+// function that toggles(switches) between adding and removing class='strike'
+// from li which puts a line throught it from CSS styling
+function crossOut() {
+  li.toggleClass('strike');
+}
+//event listener for double click to cross out li item
+li.on('dblclick', crossOut);
+
